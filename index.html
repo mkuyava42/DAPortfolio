@@ -157,7 +157,7 @@
         <h2>Certifications</h2>
         <div class="rule"></div>
       </div>
-      
+
 
       <div class="cert-grid">
 
@@ -181,15 +181,16 @@
           </div>
         </div>
 
-          <div class="cert-card">
-            <div class="cert-thumb">
-              <img src="images/Data_Visualization_Tableau_Specialization_UCDavis.png" alt="Data Visualization with Tableau Certificate">
-            </div>
-            <div class="cert-body">
-              <h4>Data Visualization with Tableau</h4>
-              <p class="cert-issuer">UC Davis Corsera</p>
-            </div>
+        <div class="cert-card">
+          <div class="cert-thumb">
+            <img src="images/Data_Visualization_Tableau_Specialization_UCDavis.png"
+              alt="Data Visualization with Tableau Certificate">
           </div>
+          <div class="cert-body">
+            <h4>Data Visualization with Tableau</h4>
+            <p class="cert-issuer">UC Davis Corsera</p>
+          </div>
+        </div>
 
         <div class="cert-card">
           <div class="cert-thumb">
@@ -201,17 +202,17 @@
           </div>
         </div>
 
-            <div class="cert-card">
-              <div class="cert-thumb">
-                <img src="images/GoogleAdvancedDataAnalytic.png" alt="Google Advanced Data Analytics Certificate">
-              </div>
-              <div class="cert-body">
-                <h4>Google Advanced Data Analytics</h4>
-                <p class="cert-issuer">Google Coursera</p>
-              </div>
-            </div>
+        <div class="cert-card">
+          <div class="cert-thumb">
+            <img src="images/GoogleAdvancedDataAnalytic.png" alt="Google Advanced Data Analytics Certificate">
+          </div>
+          <div class="cert-body">
+            <h4>Google Advanced Data Analytics</h4>
+            <p class="cert-issuer">Google Coursera</p>
+          </div>
+        </div>
 
-        
+
 
         <div class="cert-card">
           <div class="cert-thumb">
@@ -230,7 +231,11 @@
   <footer class="site-footer" id="contact">
     <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; width:100%;">
       <span>© 2026 Marisa Kuyava — Data Analyst Portfolio</span>
-      <span>github.com/marisakuyava · linkedin.com/in/marisa-kuyava</span>
+      <span>
+        <a href="https://github.com/mkuyava42" target="_blank" rel="noopener">github.com/mkuyava42</a>
+        ·
+        <a href="https://linkedin.com/in/marisa-kuyava" target="_blank" rel="noopener">linkedin.com/in/marisa-kuyava</a>
+      </span>
     </div>
   </footer>
 
@@ -240,23 +245,23 @@
   </div>
 
   <script>
-  const lightbox = document.getElementById("certLightbox");
-  const lightboxImg = document.getElementById("certLightboxImg");
+    const lightbox = document.getElementById("certLightbox");
+    const lightboxImg = document.getElementById("certLightboxImg");
 
-  document.querySelectorAll(".cert-thumb img").forEach((img) => {
-    img.addEventListener("click", () => {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightbox.classList.add("open");
+    document.querySelectorAll(".cert-thumb img").forEach((img) => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add("open");
+      });
     });
-  });
 
-  function closeLightbox() { lightbox.classList.remove("open"); }
+    function closeLightbox() { lightbox.classList.remove("open"); }
 
-  document.getElementById("certLightboxClose").addEventListener("click", closeLightbox);
-  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
-</script>
+    document.getElementById("certLightboxClose").addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
+  </script>
 
 </body>
 
