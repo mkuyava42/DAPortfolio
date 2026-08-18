@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AQI Explorer — Marisa Kuyava</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">marisa<span>.</span>kuyava</a>
+      <nav class="nav">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom:40px;">
+    <div class="wrap">
+      <a class="back" href="../index.html">← Back to all work</a>
+      <p class="eyebrow">Case Study — Environmental Data</p>
+      <h1>AQI <em>Explorer</em></h1>
+      <p class="lede">
+        A year of EPA air quality readings across U.S. cities, turned into an
+        interactive map and time-series dashboard. Built as a full pipeline
+        from raw API pulls to a deployed web app.
+      </p>
+      <div class="hero-meta">
+        <span><b>Tools</b> Python, pandas, Matplotlib, Folium, Streamlit</span>
+        <span><b>Source</b> AirNow API (EPA)</span>
+        <span><b>Type</b> ETL Pipeline + Interactive Dashboard</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Snapshot</span>
+        <h2>Headline numbers</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="num">365</div>
+          <div class="label">Days of data</div>
+        </div>
+        <div class="stat">
+          <div class="num">6</div>
+          <div class="label">Pollutants tracked</div>
+        </div>
+        <div class="stat">
+          <div class="num">Multi</div>
+          <div class="label">U.S. cities</div>
+        </div>
+        <div class="stat">
+          <div class="num">Daily</div>
+          <div class="label">Refresh cadence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">01</span>
+        <h2>The question</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="prose">
+        <p>
+          <strong>The problem:</strong> air quality data from the EPA is public,
+          but it's scattered across per-city, per-pollutant API calls, not
+          something a non-technical person can glance at to answer "is the air
+          bad where I live, and is it getting worse?"
+        </p>
+        <p>
+          <strong>The goal:</strong> build a pipeline that pulls a full year of
+          readings for six major pollutants, PM2.5, PM10, O₃, NO₂, SO₂, and
+          CO, across multiple cities, reduces them to a single daily max AQI
+          per city, and puts that on a map anyone can explore over time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">02</span>
+        <h2>Process</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="findings">
+        <div class="finding">
+          <span class="mark">01</span>
+          <p><strong>Ingest via the AirNow API.</strong> Fetched historical
+            readings for multiple ZIP codes across a full year, using
+            environment variables to keep the API key out of source control.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">02</span>
+          <p><strong>Aggregate with pandas.</strong> Rolled up raw pollutant
+            readings into a single daily maximum AQI per city, the standard way
+            AQI is reported to the public.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">03</span>
+          <p><strong>Visualize two ways.</strong> Built static time-series
+            plots in Matplotlib to compare trend lines across cities, and a
+            Folium map with a time slider so the same data could be explored
+            geographically, day by day.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">04</span>
+          <p><strong>Ship it as an app.</strong> Wrapped the analysis in a
+            Streamlit interface with city and date selectors and deployed it
+            live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">03</span>
+        <h2>What it shows</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="findings">
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Data engineering, not just analysis:</strong> this project
+            is the pipeline itself, API ingestion, error handling and data
+            validation on daily updates, and aggregation logic.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Geospatial storytelling:</strong> the animated time-slider
+            map makes pollution trends visible at a glance in a way a table of
+            AQI numbers never could.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Built to be extended:</strong> the repo's roadmap includes
+            weather-data correlation, automated weekly refresh via GitHub
+            Actions, and threshold-based alerting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">04</span>
+        <h2>Visuals</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="visual-grid">
+        <div class="visual">
+          <img src="/images/DailyMaxAQI.png" alt="AQI By City" style="width:100%; border-radius:6px; display:block;">
+          Daily Max AQI by City
+        </div>
+        <div class="visual">
+          <img src="/images/AQIMap.png" alt="AQI Interactive Map" style="width:100%; border-radius:6px; display:block;">
+          AQI Interactive App
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">05</span>
+        <h2>Explore it yourself</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="linkrow">
+        <a class="btn primary" href="https://github.com/mkuyava42/aqi-explorer">GitHub Repository →</a>
+        <a class="btn" href="https://aqi-explorer.onrender.com/">Live
+          AQI Map →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; width:100%;">
+      <span>© 2026 Marisa Kuyava — Data Analyst Portfolio</span>
+      <a class="back" style="margin:0;" href="../index.html">← Back to all work</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bellabeat — Marisa Kuyava</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">marisa<span>.</span>kuyava</a>
+      <nav class="nav">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom:40px;">
+    <div class="wrap">
+      <a class="back" href="../index.html">← Back to all work</a>
+      <p class="eyebrow">Case Study — Health & Fitness</p>
+      <h1>Bellabeat — Google Data<br>Analytics <em>Capstone</em></h1>
+      <p class="lede">
+        What do smart-device usage patterns reveal about who stays engaged and
+        who drops off? What should a wellness company actually do about
+        it? A capstone analysis of fitness tracker data using R.
+      </p>
+      <div class="hero-meta">
+        <span><b>Tools</b> R, tidyverse, dplyr, ggplot2, janitor, lubridate</span>
+        <span><b>Source</b> Fitabase smart device usage data</span>
+        <span><b>Type</b> Statistical Analysis + Marketing Recommendations</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Snapshot</span>
+        <h2>Headline numbers</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="num">3</div>
+          <div class="label">User behavior patterns found</div>
+        </div>
+        <div class="stat">
+          <div class="num">+15%</div>
+          <div class="label">Projected lift in daily active users</div>
+        </div>
+        <div class="stat">
+          <div class="num">R</div>
+          <div class="label">Primary language</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">01</span>
+        <h2>The question</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="prose">
+        <p>
+          <strong>The client:</strong> Bellabeat, a wellness-tech company making
+          smart devices for women, wanted to understand how people actually
+          use fitness trackers day to day, and how that understanding could
+          sharpen their marketing strategy.
+        </p>
+        <p>
+          <strong>The task:</strong> analyze smart-device usage records,
+          steps, activity minutes, sleep, and engagement frequency, to
+          identify behavior patterns tied to daily engagement, then translate
+          those patterns into concrete recommendations Bellabeat's marketing
+          team could act on.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">02</span>
+        <h2>Process</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="findings">
+        <div class="finding">
+          <span class="mark">01</span>
+          <p><strong>Clean with janitor & lubridate.</strong> Standardized
+            column names, parsed and validated date/time fields, and checked
+            the usage logs for duplicates and gaps before analysis.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">02</span>
+          <p><strong>Explore with dplyr & tidyverse.</strong> Segmented users
+            by activity level and engagement frequency, then ran trend and
+            correlation analysis to see which behaviors tracked with sustained
+            daily use versus drop-off.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">03</span>
+          <p><strong>Visualize with ggplot2.</strong> Built publication-ready
+            charts to communicate the three key patterns clearly enough for a
+            non-technical marketing audience.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">04</span>
+          <p><strong>Translate to recommendations.</strong> Converted the
+            statistical findings into specific marketing actions targeting
+            inactive users, with an estimated impact on daily active users.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">03</span>
+        <h2>Key findings</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="findings">
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Three distinct usage patterns emerged</strong> from the
+            engagement data, each with a different implication for how and when
+            Bellabeat should prompt users to stay active with their device.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Targeting inactive users directly is projected to lift
+              daily active users by 15%</strong> — the headline recommendation
+            delivered to stakeholders, backed by the underlying segmentation.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Statistical rigor behind the story:</strong> findings were
+            built on trend analysis, correlation studies, and user segmentation
+            rather than surface-level averages, and presented as
+            publication-ready visuals rather than raw output.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">04</span>
+        <h2>Visuals</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="visual-grid">
+        <div class="visual">
+          <img src="/images/ActiveTime.png" alt="Active Time of Day Chart"
+            style="width:100%; border-radius:6px; display:block;">
+          Active Time of Day Chart
+        </div>
+        <div class="visual">
+          <img src="/images/BellabeatSleepSedentary.png" alt="Active Time of Day Chart"
+            style="width:100%; border-radius:6px; display:block;">
+          Sleep & Sedentary Time Chart
+        </div>
+      </div>
+      <p style="font-family:var(--mono); font-size:12px; color:var(--text-dim); margin-top:16px;">
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">05</span>
+        <h2>Explore it yourself</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="linkrow">
+        <a class="btn primary" href="https://github.com/mkuyava42/Bellabeat" target="_blank" rel="noopener">GitHub repo
+          →</a>
+        <a class="btn" href="https://www.kaggle.com/code/marisakuyava/bellabeat-google-data-analytics-capstone/notebook"
+          target="_blank" rel="noopener">Kaggle notebook →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; width:100%;">
+      <span>© 2026 Marisa Kuyava — Data Analyst Portfolio</span>
+      <a class="back" style="margin:0;" href="../index.html">← Back to all work</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

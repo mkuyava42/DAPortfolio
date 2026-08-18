@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Shopping Behavior Analysis — Marisa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">marisa<span>.</span>kuyava</a>
+      <nav class="nav">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom:40px;">
+    <div class="wrap">
+      <a class="back" href="../index.html">← Back to all work</a>
+      <p class="eyebrow">Case Study — Retail Analytics</p>
+      <h1>Customer Shopping<br>Behavior <em>Analysis</em></h1>
+      <p class="lede">
+        What separates a loyal customer from a one-time buyer? An end-to-end
+        analysis of 3,900 retail transactions to find where subscription,
+        discounting, and shipping choices actually move loyalty.
+      </p>
+      <div class="hero-meta">
+        <span><b>Tools</b> Python (pandas), Power BI, Tableau</span>
+        <span><b>Dataset</b> 3,900 rows · 20 fields</span>
+        <span><b>Type</b> EDA + Dashboard + Deck</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Snapshot</span>
+        <h2>Headline numbers</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="num">3,900</div>
+          <div class="label">Transactions</div>
+        </div>
+        <div class="stat">
+          <div class="num">$60.05</div>
+          <div class="label">Avg. purchase</div>
+        </div>
+        <div class="stat">
+          <div class="num">3.69 / 5</div>
+          <div class="label">Avg. review rating</div>
+        </div>
+        <div class="stat">
+          <div class="num">62%</div>
+          <div class="label">Loyal segment</div>
+        </div>
+        <div class="stat">
+          <div class="num">26%</div>
+          <div class="label">Subscribed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">01</span>
+        <h2>The question</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="prose">
+        <p>
+          <strong>The business problem:</strong> the retailer wanted to know which
+          levers, subscription status, discounting, shipping speed, purchase
+          frequency, actually correlate with a customer moving from "new" to
+          "returning" to "loyal," so marketing spend could follow the signal
+          instead of a hunch.
+        </p>
+        <p>
+          <strong>The data:</strong> a transaction-level export covering
+          demographics, product category, purchase amount, review rating,
+          subscription and discount status, shipping type, and purchase
+          frequency across four categories: Clothing, Accessories, Footwear,
+          and Outerwear.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">02</span>
+        <h2>Process</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="findings">
+        <div class="finding">
+          <span class="mark">01</span>
+          <p><strong>Clean & profile in Python.</strong> Loaded the export in
+            pandas, standardized column naming and category labels, checked for
+            duplicates and nulls, and profiled distributions for purchase
+            amount, rating, and frequency before any visual work.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">02</span>
+          <p><strong>Segment the customer base.</strong> Grouped customers into
+            New, Returning, and Loyal segments and cross-tabbed each against
+            subscription status, discount usage, and shipping type to isolate
+            what loyal customers do differently.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">03</span>
+          <p><strong>Build the dashboard.</strong> Modeled the cleaned table in
+            Power BI for the internal, filterable view (by category, region,
+            segment) and rebuilt the headline visuals in Tableau Public for a
+            shareable, embeddable version.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">03</span>
+        <h2>Key findings</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="findings">
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Loyalty is the default outcome, not the exception:</strong>
+            62% of customers in the dataset are already classified Loyal versus
+            just 1% New; meaning most of the visible dataset is retention
+            behavior, not acquisition behavior, which reframes the whole
+            analysis toward "what keeps loyal customers loyal."</p>
+        </div>
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Subscriptions are underused:</strong> only 26% of customers
+            are subscribed, despite subscription customers skewing toward the
+            loyal segment, a clear upsell target for marketing.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Purchase cadence clusters around quarterly:</strong> the
+            most common repurchase interval is quarterly or annual rather than
+            monthly, suggesting lifecycle email/reminder campaigns should be
+            timed to a 3-month cycle rather than a 30-day one.</p>
+        </div>
+        <div class="finding">
+          <span class="mark">→</span>
+          <p><strong>Clothing dominates volume:</strong> Clothing accounts for
+            44% of all transactions, more than double the next category
+            (Accessories, 32%), so category-level promotions have outsized
+            reach if targeted at Clothing first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">04</span>
+        <h2>Visuals</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="visual-grid">
+        <div class="visual">
+          <img src="/images/PowerBIDashboard.png" alt="Power BI dashboard"
+            style="width:100%; border-radius:6px; display:block;">
+          Power BI Dashboard
+        </div>
+        <div class="visual">
+          <img src="/images/TableauDashboard.png" alt="Tableau dashboard"
+            style="width:100%; border-radius:6px; display:block;">
+          Tableau Dashboard
+        </div>
+        <div class="visual">
+          <img src="/images/AvgProductRating.png" alt="SQL Average Product Rating Chart"
+            style="width:100%; border-radius:6px; display:block;">
+          SQL Average Product Rating Chart
+        </div>
+      </div>
+      <p style="font-family:var(--mono); font-size:12px; color:var(--text-dim); margin-top:16px;">
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">05</span>
+        <h2>Explore it yourself</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="linkrow">
+        <a class="btn primary" href="https://github.com/mkuyava42/Customer-Trends/tree/main">GitHub Repository →</a>
+        <a class="btn"
+          href="https://public.tableau.com/app/profile/marisa.kuyava/viz/CustomerTrends_17870809082280/OverviewDashboard">Live
+          Tableau dashboard →</a>
+        <a class="btn"
+          href="https://github.com/mkuyava42/Customer-Trends/blob/main/customer_shopping_trends.ipynb">Jupyter notebook
+          →</a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; width:100%;">
+      <span>© 2026 Marisa Kuyava — Data Analyst Portfolio</span>
+      <a class="back" style="margin:0;" href="../index.html">← Back to all work</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
